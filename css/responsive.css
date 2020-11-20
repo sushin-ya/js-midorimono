@@ -1,0 +1,121 @@
+/* タブレット向けレイアウト */
+@media all and (max-width: 1000px) {
+  .header-content p {
+    font-size: 24 px;
+  }
+
+  .top-wrapper {
+    padding-bottom: 200px;
+  }
+
+  .top-wrapper .intro-text {
+    font-size: 28px;
+    letter-spacing: 5px;
+  }
+
+  .main-wrapper {
+    padding: 100px 100px;
+  }
+
+  .main-wrapper img {
+    width: 80%;
+  }
+
+  .about-wrapper .about-title {
+    font-size: 80px;
+  }
+
+  .about-content .about-text p {
+    font-size: 18px;
+  }
+
+  .about-text-p {
+    left: 50%;
+  }
+
+  .mission-title {
+    font-size: 80px;
+  }
+
+  .mission-text p {
+    font-size: 18px;
+  }
+
+  .mission-text-p {
+    left: 50%;
+  }
+
+  .contact-title {
+    font-size: 80px;
+  }
+}
+
+/* スマホ向けレイアウト */
+@media all and (max-width: 670px) {
+  .header-content p {
+    font-size: 20px;
+  }
+
+  .header-content a {
+    display: none;
+  }
+
+  .opening-text {
+    font-size: 120px;
+  }
+
+  .main-wrapper img {
+    width: 100%;
+  }
+
+  .top-wrapper {
+    padding: 65px 50px 50px 50px;
+  }
+
+  .top-wrapper .intro-title {
+    font-size: 84px;
+  }
+
+  .main-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .about-wrapper .about-content {
+    margin-top: 25px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-content .about-image {
+    width: 100%;
+  }
+
+  .about-content .about-text {
+    height: 150px;
+    width: 100%;
+  }
+
+  .mission-content {
+    margin-top: 25px;
+  }
+
+  .mission-content {
+    flex-direction: column;
+  }
+
+  .mission-image {
+    width: 100%;
+  }
+
+  .mission-text {
+    height: 150px;
+    width: 100%;
+  }
+
+  .contact-wrapper {
+    padding-top: 50px;
+  }
+}

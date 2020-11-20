@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Nico Moji", "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  background-color: rgb(34, 139, 34);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header */
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgb(34, 139, 34, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  line-height: 65px;
+  color: white;
+}
+
+.header-content p {
+  font-size: 36px;
+  padding: 0 25px;
+  float: left;
+}
+
+.header-content .hidden {
+  display: none;
+}
+
+.header-content a {
+  font-size: 20px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+}
+
+.header-content a:hover {
+  background-color: rgb(0, 128, 255, 0.3);
+}
+
+/* footer */
+footer {
+  height: 32px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* opening */
+#mask {
+  background: rgb(34, 139, 34);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 14;
+  display: block;
+}
+
+#modal {
+  background: rgb(34, 139, 34);
+  width: 800px;
+  height: 400px;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 0.4s;
+  color: white;
+  z-index: 15;
+  display: block;
+}
+
+#mask.hidden {
+  animation: hidden 0.5s ease-out;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#modal.hidden {
+  animation: hidden 0.5s ease-out;
+  pointer-events: none;
+  opacity: 0;
+}
+
+@keyframes text-move {
+  0% {
+    stroke-dashoffset: 300;
+    fill: none;
+  }
+  90% {
+    fill: rgb(34, 139, 34);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+}
+.opening-text {
+  color: white;
+  font-size: 200px;
+  font-weight: bold;
+  fill: #fff;
+  stroke: #fff;
+  text-anchor: middle;
+  animation: text-move 3.5s ease-out;
+  stroke-dasharray: 300;
+}
+
+@keyframes hidden {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* top-wapper */
+.top-wrapper {
+  padding: 100px 50px 50px 50px;
+  background-size: cover;
+  color: white;
+}
+
+.top-wrapper .intro-text {
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+
+.top-wrapper .intro-description {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+.top-wrapper .intro-discription p:nth-child(2) {
+  margin-top: 5px;
+}
+
+.top-wrapper .intro-title {
+  font-size: 200px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+/* main-wrapper */
+
+.main-wrapper {
+  padding: 100px 250px;
+  background-size: cover;
+  color: white;
+}
+
+.main-screen {
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.main-wrapper img {
+  margin: 0 auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.main-screen-position {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.main-screen-position span {
+  padding: 0 10px;
+  opacity: 0.7;
+}
+
+#main-screen-pagenation.active {
+  opacity: 1;
+}
+
+/* about-wrapper */
+.about-wrapper {
+  padding: 50px 50px 50px 50px;
+  color: white;
+  text-align: center;
+}
+
+.about-wrapper .about-title {
+  font-size: 100px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.about-wrapper .about-description p {
+  font-size: 32px;
+}
+
+.about-wrapper .about-content {
+  margin-top: 50px;
+  display: flex;
+}
+
+.about-content .about-image {
+  width: 60%;
+}
+
+.about-content .about-image img {
+  width: 80%;
+}
+
+.about-content .about-text {
+  width: 40%;
+  font-size: 24px;
+  letter-spacing: 5px;
+  position: relative;
+}
+
+.about-text-p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+/* mission-wrapper */
+.mission-wrapper {
+  padding: 50px 50px 50px 50px;
+  color: white;
+  text-align: center;
+}
+
+.mission-title {
+  font-size: 100px;
+  letter-spacing: 5px;
+  margin-bottom: 50px;
+}
+
+.mission-description p {
+  font-size: 32px;
+}
+
+.mission-content {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.mission-image {
+  width: 60%;
+}
+
+.mission-image img {
+  width: 80%;
+}
+
+.mission-text {
+  width: 40%;
+  font-size: 24px;
+  letter-spacing: 5px;
+  position: relative;
+}
+
+.mission-text-p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+/* contact-wrapper */
+.contact-wrapper {
+  padding: 100px 50px 50px 50px;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 100px;
+  letter-spacing: 5px;
+  margin-bottom: 50px;
+}
+
+.material-icons {
+  font-size: 52px;
+  font-weight: bold;
+  padding: 100px;
+}
+
+.updown {
+  animation: mover 0.3s infinite alternate;
+}
+
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* animation */
+.sa {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.sa.show {
+  opacity: 1;
+  transform: none;
+}
+
+.sa--up {
+  transform: translate(0, 100px);
+}
