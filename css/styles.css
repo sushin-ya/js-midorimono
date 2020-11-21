@@ -186,7 +186,7 @@ footer {
   opacity: 0.7;
 }
 
-#main-screen-pagenation.active {
+.main-screen-position span.active {
   opacity: 1;
 }
 
@@ -198,6 +198,11 @@ footer {
 }
 
 .about-wrapper .about-title {
+  font-size: 100px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+.about-wrapper .about-title span {
   font-size: 100px;
   letter-spacing: 5px;
   margin-bottom: 20px;
@@ -308,8 +313,12 @@ footer {
 }
 
 @keyframes mover {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 /* animation */
